@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  justify-content: center;
+}
+
+.homeBody{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+#quizContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.questionContainer {
+  border: 1px solid grey;
+  border-radius: 1em;
+  padding: 2em;
+}
+
+.questionContainer * {
+  margin: 0px;
+  padding: 0px;
+}
+
+.answerContainer {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.answerContainer > * {
+  width: 100%;
+}
+
+.answerContainer input { /* To hide the radio buttons and just leave the label text*/
+  display: none;
+}
+
+.answerContainer > label {
+  background-color: silver;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.answerContainer > input:checked + label { /* Highlighting for the selected label */
+  font-weight: bold;
+  background-color: #00ffaa;
+}
+
+#resultsContainer {
+  text-align: center;
+  font-size: 2em;
+  padding: 1em;
+}
