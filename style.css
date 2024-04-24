@@ -1,34 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   box-sizing: border-box;
+  margin: 0px;
 }
 body {
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
+  font-family: "montserrat", sans-serif;
   justify-content: center;
 }
+h1{
+  font-family: "Concert One", sans-serif;
+  font-size: 12vw;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+button{
+  border: none;
+  border-radius: 1em;
+  padding: 10px;
+  font-family: "Concert One", sans-serif;
+  font-size: 3vw;
+}
+button:hover{
+  border: 5px solid black;
+}
 
+.extraContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading{
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.menu{
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0px;
+  padding: 10px;
+}
+.menu a{
+  font-family: "Concert One", sans-serif;
+  color: white;
+  font-size: 3vw;
+}
+
+
+#homepage{
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  background-image: url("emoji.jpg");
+}
 .homeBody{
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
   height: 100vh;
-  align-items: center;
 }
+.homeBody h1{
+  margin: 10vh;
+  margin-top: 15vh;
+  font-size: 8vw;
+}
+
+
+#faceQuizBody{
+  background-color: #fdefb2;
+}
+#faceQuizBody .heading{
+  background-image: url(yellow.png);
+}
+#faceQuizBody .menu{
+  background-color: #ecb753;
+}
+#faceQuizBody .menu a:hover{
+  color: darkgoldenrod;
+}
+#faceQuizBody input:hover + label { /* Highlighting for the selected label */
+  background-color: lightyellow;
+  border: 2px solid #ecb753;
+}
+#faceQuizBody input:checked + label { /* Highlighting for the selected label */
+  font-weight: bold;
+  background-color: lightyellow;
+  border: 5px solid #ecb753;
+}
+#faceQuizBody #executeButton:hover{
+  background-color: lightyellow;
+  border: 8px dashed #ecb753;
+}
+#animalQuizBody{
+  background-color:#fcc7c3;
+}
+#animalQuizBody .heading{
+  background-image: url(red.jpg);
+}
+#animalQuizBody .menu{
+  background-color: #9b0014;
+}
+#animalQuizBody .menu a:hover{
+  color: #400000;
+}
+#animalQuizBody input:hover + label { /* Highlighting for the selected label */
+  background-color: #feeceb;
+  border: 2px solid darkred;
+}
+#animalQuizBody input:checked + label { /* Highlighting for the selected label */
+  font-weight: bold;
+  background-color: #feeceb;
+  border: 5px solid darkred;
+}
+#skyQuizBody{
+  background-color: lightblue;
+}
+#skyQuizBody .heading{
+  background-image: url(blue.jpg);
+}
+#skyQuizBody .menu{
+  background-color: #123499;
+}
+#skyQuizBody .menu a:hover{
+  color: #061148;
+}
+#skyQuizBody input:hover + label { /* Highlighting for the selected label */
+  background-color: #dbf0fe;
+  border: 2px solid #123499;
+}
+#skyQuizBody input:checked + label { /* Highlighting for the selected label */
+  font-weight: bold;
+  background-color: #dbf0fe;
+  border: 5px solid #123499;
+}
+
+.buttonContainer button{
+  border: 3px solid black;
+}
+#faceQuizButton:hover{
+  background-color: lightyellow;
+  border: 8px dashed #ecb753;
+}
+#faceQuizBody #executeButton:hover{
+  background-color: lightyellow;
+  border: 8px dashed #ecb753;
+}
+#animalQuizButton:hover{
+  background-color: #feeceb;
+  border: 8px dashed darkred;
+}
+#animalQuizBody #executeButton:hover{
+  background-color: #feeceb;
+  border: 8px dashed darkred;
+}
+#skyQuizButton:hover{
+  background-color: #dbf0fe;
+  border: 8px dashed #123499;
+}
+#skyQuizBody #executeButton:hover{
+  background-color: #dbf0fe;
+  border: 8px dashed #123499;
+}
+
+
+
+#executeButton,#homeButton{
+  border: 3px solid black;
+  margin-bottom: 15vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+#homeButton:hover{
+  border: 8px solid black;
+}
+
 
 #quizContainer {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 8vh;
+  margin: 12vh;
 }
-
 .questionContainer {
-  border: 1px solid grey;
+  border: 3px solid black;
   border-radius: 1em;
   padding: 2em;
+  background-color: white;
 }
-
 .questionContainer * {
   margin: 0px;
   padding: 0px;
@@ -36,31 +209,63 @@ body {
 
 .answerContainer {
   display: flex;
-  gap: 1em;
-  margin-top: 1em;
+  gap: 1.5em;
+  margin-top: 2.5em;
 }
-
 .answerContainer > * {
   width: 100%;
 }
-
 .answerContainer input { /* To hide the radio buttons and just leave the label text*/
   display: none;
 }
-
 .answerContainer > label {
-  background-color: silver;
+  background-color: lightgray;
   padding: 0.5em;
   cursor: pointer;
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  font-weight: 600;
+  font-size: 1.75vw;
 }
-
-.answerContainer > input:checked + label { /* Highlighting for the selected label */
-  font-weight: bold;
-  background-color: #00ffaa;
+h3{
+  font-size: 2.5vw;
 }
 
 #resultsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 2em;
   padding: 1em;
+  border-radius: 1em;
+  padding: 2em;
+  margin: 3vw;
 }
+#img img{
+  aspect-ratio: 1/1;
+  max-width: 100%;
+  max-height: 100;
+  height: 50vh;
+  object-fit: contain;
+  margin: 10vh;
+}
+
+.buttonContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20vh;
+}
+
+
+
+
+
+

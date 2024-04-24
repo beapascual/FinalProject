@@ -9,50 +9,51 @@ let button = document.getElementById("executeButton");
 button.addEventListener("click", 
   function(){
     totalQuizResults();
+    // executeButton.style.visibility = 'hidden';
   }
 );
 
 
 let quizDB = [
 {
-  "question" : "What would you do if you got the wrong order at a restaurant?",
-  "answers" : ["Save the food for later and get something else", "Tell the waiter", "Eat the wrong order", "Ask your friend to tell the waiter"]
+  "question" : "Which of these is your favorite drink?",
+  "answers" : ["Iced Tea", "Fruit Smoothie", "Soda", "Lemonade"]
 },
 {
-  "question" : "What would you do if there was a zombie apocolypse?",
-  "answers" : ["Fight back against the zombies", "Accidentally trap yourself with the zombies", "Attempt to befriend the zombies", "Sacrifice yourself to save other people"]
+  "question" : "Which of these is your favorite color?",
+  "answers" : ["Purple", "Blue", "Green", "Yellow"]
 },
 {
-  "question" : "If you ran into someone you knew unexpectedly, how would you react?",
-  "answers" : ["Pretend like you didn't see them", "Make eye contact and look away", "Wave hi then move on", "Start a conversation"]
+  "question" : "Which of these is your favorite genre?",
+  "answers" : ["Fantasy", "Mystery", "Romance", "Comedy"]
 },
 {
-  "question" : "If you were at a party, what would you usually be doing?",
-  "answers" : ["Waiting until it's appropriate to leave", "Eating all the snacks", "Becoming friends with strangers", "Talking to a few people in a corner"]
+  "question" : "Which of these is your favorite time of day?",
+  "answers" : ["Midnight", "Sunset", "Afternoon", "Morning"]
 },
 {
-  "question" : "If you could be any animated character, who would you be?",
-  "answers" : ["Gudetama", "Squidward", "Kirby", "Aang"]
+  "question" : "What is your favorite element?",
+  "answers" : ["Water", "Earth", "Air", "Fire"]
 },
 {
-  "question" : "If you met your favorite celebrity what would you do?",
-  "answers" : ["Run away", "Tell your friends", "Ask for a picture", "Strike up a conversation"]
+  "question" : "Which of these environments do you prefer?",
+  "answers" : ["City", "Forest", "Mountain", "Beach"]
 },
 {
-  "question" : "What would you do after eating dinner with your friends?",
-  "answers" : ["Leave and wind down for the day", "Leave when someone else leaves", "Grab dessert", "Stay and hang out for a bit"]
+  "question" : "Which of these countries would you most like to visit?",
+  "answers" : ["Japan", "Canada", "London", "Iceland"]
 },
 {
-  "question" : "How do you react when sitting next to a talkative stranger for a long plane ride?",
-  "answers" : ["Sleep and forget that they're there", "Debate about whether or not you should talk to them", "Initiate the conversation and ask them about their plans", "Respond to them until the conversation ends"]
+  "question" : "Which of these is your favorite dessert?",
+  "answers" : ["Cookies", "Cake", "Crepe", "Ice Cream"]
 },
 {
-  "question" : "What would you do if a new movie came out only in theaters?",
-  "answers" : ["Pirate it", "Suggest to a friend that you guys should watch it together", "Watch it in theaters", "Wait until it comes out somewhere you can watch it for free"]
+  "question" : "What is your favorite season?",
+  "answers" : ["Winter", "Fall", "Spring", "Summer"]
 },
 {
-  "question" : "What would you do if you were the least tired one at a sleepover?",
-  "answers" : ["Stay on your phone until you become tired enough", "Pretend to be asleep", "Keep talking until everyone falls asleep", "Suggest that it's time to go to bed"]
+  "question" : "Which of these superpowers would you most like to have?",
+  "answers" : ["Invisibility", "Telekenisis", "Teleportation", "Mind Reading"]
 },
 ];
 
@@ -129,37 +130,36 @@ function totalQuizResults() {
   let description = "";
   let img = document.getElementById("img");
   let devImg = new Image();
-
   
   if (runningTotalPoints < 8) {
-    outputText = "You are an upside down emoji!"
-    devImg.src = "ud.png"
+    outputText = "You are a moon emoji!"
+    devImg.src = "moon.png"
     description = "test test test test"
   }
   if (runningTotalPoints >= 8) {
-    outputText = "You are a sobbing emoji!"
-    devImg.src = "sob.png"
+    outputText = "You are a star emoji!"
+    devImg.src = "star.png"
     description = "lalalallaala"
   }
   if (runningTotalPoints >= 15) {
-    outputText = "You are a heart-eyes emoji!"
-    devImg.src = "hearteye.png"
+    outputText = "You are a cloud emoji!"
+    devImg.src = "cloud.png"
     description = "JUMP dadadi dum dum"
   }
   if (runningTotalPoints >= 23) {
-    outputText = "You are an angel emoji!";
-    devImg.src = "angel.png"
+    outputText = "You are a sun emoji!";
+    devImg.src = "sun.png"
     description = "hello my name is"
   }
 
   resultsElementOne.innerText = outputText;
   resultsElementTwo.innerText = description;
-  img.appendChild(devImg)
 
   resultsContainer.style.backgroundColor = "white"
   resultsContainer.style.border = "3px solid black"
+  resultsContainer.style.boxShadow = "5px 5px 5px black"
   executeButton.style.visibility = "hidden"
-
+  img.appendChild(devImg)
 
 
 

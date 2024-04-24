@@ -9,50 +9,51 @@ let button = document.getElementById("executeButton");
 button.addEventListener("click", 
   function(){
     totalQuizResults();
+    // executeButton.style.visibility = 'hidden';
   }
 );
 
 
 let quizDB = [
 {
-  "question" : "What would you do if you got the wrong order at a restaurant?",
-  "answers" : ["Save the food for later and get something else", "Tell the waiter", "Eat the wrong order", "Ask your friend to tell the waiter"]
+  "question" : "How would you most likely spend your free time?",
+  "answers" : ["Recharging alone in your room", "Hanging out at home with a few friends", "Going out to eat with a large group", "Partying!"]
 },
 {
-  "question" : "What would you do if there was a zombie apocolypse?",
-  "answers" : ["Fight back against the zombies", "Accidentally trap yourself with the zombies", "Attempt to befriend the zombies", "Sacrifice yourself to save other people"]
+  "question" : "Which of these hobbies do you enjoy the most?",
+  "answers" : ["Drawing", "Cooking", "Gaming", "Shopping"]
 },
 {
-  "question" : "If you ran into someone you knew unexpectedly, how would you react?",
-  "answers" : ["Pretend like you didn't see them", "Make eye contact and look away", "Wave hi then move on", "Start a conversation"]
+  "question" : "Which of these social media apps do you use the most?",
+  "answers" : ["Pinterest", "TikTok", "Instagram", "Snapchat"]
 },
 {
-  "question" : "If you were at a party, what would you usually be doing?",
-  "answers" : ["Waiting until it's appropriate to leave", "Eating all the snacks", "Becoming friends with strangers", "Talking to a few people in a corner"]
+  "question" : "How would your friends describe you?",
+  "answers" : ["Artistic", "Confident", "Friendly", "Cheerful"]
 },
 {
-  "question" : "If you could be any animated character, who would you be?",
-  "answers" : ["Gudetama", "Squidward", "Kirby", "Aang"]
+  "question" : "Which activity seems the most fun?",
+  "answers" : ["Watching a movie", "Going camping", "Having a picnic", "Going bowling"]
 },
 {
-  "question" : "If you met your favorite celebrity what would you do?",
-  "answers" : ["Run away", "Tell your friends", "Ask for a picture", "Strike up a conversation"]
+  "question" : "While in public, which of these do you find yourself doing the most?",
+  "answers" : ["Listening to music", "Minding your own buisiness", "Talking to strangers", "Listening to other people's conversations"]
 },
 {
-  "question" : "What would you do after eating dinner with your friends?",
-  "answers" : ["Leave and wind down for the day", "Leave when someone else leaves", "Grab dessert", "Stay and hang out for a bit"]
+  "question" : "Out of these options, what would you do right before falling asleep?",
+  "answers" : ["Imagine fake scenarios", "Scroll on your phone", "Think of the next day", "Watch youtube videos"]
 },
 {
-  "question" : "How do you react when sitting next to a talkative stranger for a long plane ride?",
-  "answers" : ["Sleep and forget that they're there", "Debate about whether or not you should talk to them", "Initiate the conversation and ask them about their plans", "Respond to them until the conversation ends"]
+  "question" : "How would you plan a vacation?",
+  "answers" : ["Spontaneously figure it out while you're there", "Book a pre-planned tour", "Plan out an itenerary", "Ask someone else to plan it for you"]
 },
 {
-  "question" : "What would you do if a new movie came out only in theaters?",
-  "answers" : ["Pirate it", "Suggest to a friend that you guys should watch it together", "Watch it in theaters", "Wait until it comes out somewhere you can watch it for free"]
+  "question" : "When do you usually wake up on your days off?",
+  "answers" : ["Past 2:00pm", "12:00pm - 2:00pm", "10:00am - 12:00pm", "Before 10:00am"]
 },
 {
-  "question" : "What would you do if you were the least tired one at a sleepover?",
-  "answers" : ["Stay on your phone until you become tired enough", "Pretend to be asleep", "Keep talking until everyone falls asleep", "Suggest that it's time to go to bed"]
+  "question" : "What do you normally do when hanging out with friends?",
+  "answers" : ["Stay indoors and talk", "Dress up to go somewhere special", "Grab a bite to eat from a comfort restaurant", "Explore somewhere you havent been before"]
 },
 ];
 
@@ -132,23 +133,23 @@ function totalQuizResults() {
 
   
   if (runningTotalPoints < 8) {
-    outputText = "You are an upside down emoji!"
-    devImg.src = "ud.png"
+    outputText = "You are a black cat emoji!"
+    devImg.src = "cat.png"
     description = "test test test test"
   }
   if (runningTotalPoints >= 8) {
-    outputText = "You are a sobbing emoji!"
-    devImg.src = "sob.png"
+    outputText = "You are a fox emoji!"
+    devImg.src = "fox.png"
     description = "lalalallaala"
   }
   if (runningTotalPoints >= 15) {
-    outputText = "You are a heart-eyes emoji!"
-    devImg.src = "hearteye.png"
+    outputText = "You are a bunny emoji!"
+    devImg.src = "bunny.png"
     description = "JUMP dadadi dum dum"
   }
   if (runningTotalPoints >= 23) {
-    outputText = "You are an angel emoji!";
-    devImg.src = "angel.png"
+    outputText = "You are a chick emoji!";
+    devImg.src = "chick.png"
     description = "hello my name is"
   }
 
@@ -156,11 +157,10 @@ function totalQuizResults() {
   resultsElementTwo.innerText = description;
   img.appendChild(devImg)
 
+
   resultsContainer.style.backgroundColor = "white"
   resultsContainer.style.border = "3px solid black"
   executeButton.style.visibility = "hidden"
-
-
 
 
 
