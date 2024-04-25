@@ -15,6 +15,9 @@ h1{
   font-family: "Concert One", sans-serif;
   font-size: 12vw;
 }
+h3{
+  font-size: 2.5vw;
+}
 a{
   text-decoration: none;
   color: white;
@@ -30,12 +33,7 @@ button:hover{
   border: 5px solid black;
 }
 
-.extraContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 .heading{
   background-size: cover;
   background-position: center;
@@ -58,6 +56,12 @@ button:hover{
   font-family: "Concert One", sans-serif;
   color: white;
   font-size: 3vw;
+}
+.extraContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -106,6 +110,15 @@ button:hover{
   background-color: lightyellow;
   border: 8px dashed #ecb753;
 }
+#faceQuizButton:hover{
+  background-color: lightyellow;
+  border: 8px dashed #ecb753;
+}
+#faceQuizBody #executeButton:hover{
+  background-color: lightyellow;
+  border: 8px dashed #ecb753;
+}
+
 #animalQuizBody{
   background-color:#fcc7c3;
 }
@@ -127,6 +140,15 @@ button:hover{
   background-color: #feeceb;
   border: 5px solid darkred;
 }
+#animalQuizButton:hover{
+  background-color: #feeceb;
+  border: 8px dashed darkred;
+}
+#animalQuizBody #executeButton:hover{
+  background-color: #feeceb;
+  border: 8px dashed darkred;
+}
+
 #skyQuizBody{
   background-color: lightblue;
 }
@@ -148,26 +170,6 @@ button:hover{
   background-color: #dbf0fe;
   border: 5px solid #123499;
 }
-
-.buttonContainer button{
-  border: 3px solid black;
-}
-#faceQuizButton:hover{
-  background-color: lightyellow;
-  border: 8px dashed #ecb753;
-}
-#faceQuizBody #executeButton:hover{
-  background-color: lightyellow;
-  border: 8px dashed #ecb753;
-}
-#animalQuizButton:hover{
-  background-color: #feeceb;
-  border: 8px dashed darkred;
-}
-#animalQuizBody #executeButton:hover{
-  background-color: #feeceb;
-  border: 8px dashed darkred;
-}
 #skyQuizButton:hover{
   background-color: #dbf0fe;
   border: 8px dashed #123499;
@@ -175,18 +177,6 @@ button:hover{
 #skyQuizBody #executeButton:hover{
   background-color: #dbf0fe;
   border: 8px dashed #123499;
-}
-
-
-
-#executeButton,#homeButton{
-  border: 3px solid black;
-  margin-bottom: 15vh;
-  padding-left: 10vw;
-  padding-right: 10vw;
-}
-#homeButton:hover{
-  border: 8px solid black;
 }
 
 
@@ -231,16 +221,6 @@ button:hover{
   font-weight: 600;
   font-size: 1.75vw;
 }
-h3{
-  font-size: 2.5vw;
-}
-#instruction{
-  margin: 0px;
-}
-#instruction h2{
-  text-align: center;
-  font-size: 5vw;
-}
 
 #resultsContainer {
   display: flex;
@@ -275,6 +255,18 @@ h3{
   justify-content: space-around;
   align-items: center;
   margin-bottom: 20vh;
+}
+.buttonContainer button{
+  border: 3px solid black;
+}
+#executeButton,#homeButton{
+  border: 3px solid black;
+  margin-bottom: 15vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+#homeButton:hover{
+  border: 8px solid black;
 }
 
 
