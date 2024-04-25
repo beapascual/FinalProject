@@ -5,6 +5,7 @@ let resultsElementOne = document.getElementById("result");
 let resultsElementTwo = document.getElementById("resultDescription");
 let resultsContainer = document.getElementById("resultsContainer");
 let button = document.getElementById("executeButton");
+let instruction = document.getElementById("instruction")
 
 button.addEventListener("click", 
   function(){
@@ -134,35 +135,38 @@ function totalQuizResults() {
   if (runningTotalPoints < 8) {
     outputText = "You are an upside down emoji!"
     devImg.src = "ud.png"
-    description = "test test test test"
+    description = "People with this representative emoji tend to be independent and assertive, sometimes to the point where other people may view them as selfish. They're rarely swayed by other people's opinions -- when they want to do something, they will, regardless of the group's decision. People of this emoji are often introverts. They value their alone time, and need a good amount of it in order to recharge their social batteries. Although upside down emojis are polite and friendly, they won't hesitate to express their true opinions, regardless of whether or not it's negative. These emojis value honesty over courtesy, and are lucky enough to have a strong sense of identity."
   }
   if (runningTotalPoints >= 8) {
     outputText = "You are a sobbing emoji!"
     devImg.src = "sob.png"
-    description = "lalalallaala"
+    description = "People with this representative emoji tend to be confident and extroverted. However, despite their confidence, they have a hard time making decisions. When faced with a dilemma, they often allow other people to make a choice before following suit. Unfortunately, when they do make decisions on their own, they are rather unlucky. Sometimes, they may feel overwhelmed, as if everything that can go wrong will go wrong. Maybe it's because of their inherent confidence, but when people of this emoji make a mistake, they react in a way that makes it almost comedic. Regardless of all their misfortunes, sobbing emojis are incredibly fun to be around. They are loyal and easygoing -- overall a great friend to have."
   }
   if (runningTotalPoints >= 15) {
     outputText = "You are a heart-eyes emoji!"
     devImg.src = "hearteye.png"
-    description = "JUMP dadadi dum dum"
+    description = "People with this representative emoji tend to be friendly and optimistic. They see the world through rose-tinted glasses, and always search for the good in things. When placed in a public setting, people with this emoji don't think twice about their actions -- they do what they feel would be the most fun. Heart-eye emojis are often considered the life of the party. They're talkative in a way that keeps people excited and having fun. Even when things go wrong, people with this emoji are confident that things will turn out right in the end. Heart-eye emojis are necessary in every group. Their cheerful energy keeps people smiling, even on gloomy days."
   }
   if (runningTotalPoints >= 23) {
     outputText = "You are an angel emoji!";
     devImg.src = "angel.png"
-    description = "hello my name is"
+    description = "People with this representative emoji tend to be polite and outgoing. Although they may seem mischievous at first, they're actually rather innocent. They avoid breaking rules if they don't have to, and often look to their friends for help for matters of confrontation. That being said, angel emojis have a mature side which makes them incredibly comfortable to be around. They're always looking out for the people around them, searching for solutions that consider everyone involved. Despite their outgoing personality, angel emojis prefer smaller groups and more private settings. That being said, they have no problem holding conversations when they feel like it. With their agreeable personality, angel emojis are very popular and reliable. They are great people to keep in your life."
   }
 
   resultsElementOne.innerText = outputText;
   resultsElementTwo.innerText = description;
   img.appendChild(devImg)
 
+
+  quizOutputElement.style.marginBottom = "0px"
+  resultsContainer.style.marginTop = "0px"
   resultsContainer.style.backgroundColor = "white"
   resultsContainer.style.border = "3px solid black"
   executeButton.style.visibility = "hidden"
 
 
 
-
-
 }
+
+AOS.init();
 

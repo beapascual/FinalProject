@@ -134,35 +134,38 @@ function totalQuizResults() {
   if (runningTotalPoints < 8) {
     outputText = "You are a moon emoji!"
     devImg.src = "moon.png"
-    description = "test test test test"
+    description = "People with this representative emoji tend to have bright yet independent personalities. When around strangers, they can be loud and talkative, but with their inner circle, they're quiet and comfortable enough to do their own thing. Moon emojis are complex people. They have many layers to their personality, but it's likely that they haven't even discovered all of them. Moon emojis are very hardworking people. Once they've made up their minds, they'll do anything to achieve their goals, even if there's an easy way out. Moon emojis are usually expressive, though the way they express themselves isn't really certain. Moon emojis are comparable to a hidden gem that has yet to be discovered."
   }
   if (runningTotalPoints >= 8) {
     outputText = "You are a star emoji!"
     devImg.src = "star.png"
-    description = "lalalallaala"
+    description = "People with this representative emoji tend to have confident and trustworthy personalities. They have a very noticeable presence that often leads people to gravitate towards them. For this reason, star emojis are usually found at the center or the front of large groups. Star emojis know how to present themselves in public. They often enjoy styling themselves and going out to public places. However, despite this confident persona, star emojis strongly value their relationships with other people, to the point where they might be too polite to express what they're truly thinking. Star emojis belong at the center of their groups. They have a talent of keeping people together."
   }
   if (runningTotalPoints >= 15) {
     outputText = "You are a cloud emoji!"
     devImg.src = "cloud.png"
-    description = "JUMP dadadi dum dum"
+    description = "People with this representative emoji tend to be hopeful and imaginative. They usually have lots of thoughts in their head, which sometimes leads them to be trapped in their own world. Cloud emojis enjoy observing other people and asking hypothetical questions to see how their thoughts compare. People with this representative emoji are rather open-hearted. They become friends with people quickly, even when they plan to keep their guard up. Because of this, they can easily get hurt when they unintentionally lose touch with people. Cloud emojis have bright personalities, and its usually clear how they're feeling at any given moment. They're very comforting to be around since they have no trouble letting others into their world."
   }
   if (runningTotalPoints >= 23) {
     outputText = "You are a sun emoji!";
     devImg.src = "sun.png"
-    description = "hello my name is"
+    description = "People with this representative emoji tend to be optimistic and outspoken. They're not afraid to voice their opinions, but they usually do so with a smile on their face. People with this emoji are usually active. They enjoy being outside in nice weather, and they can't sit still for too long. When sun emojis are out in public, they tend to be surrounded by people without even meaning to be. People are drawn to sun emojis' confidence and warm energy. Sun emojis are often idealists. They have the ability to see past sad situations to happy endings that most people aren't aware of. They have lots of thoughts in their head, and once you're let in to their inner circle, they won't hesitate to let you know."
   }
 
   resultsElementOne.innerText = outputText;
   resultsElementTwo.innerText = description;
+  img.appendChild(devImg)
 
+  quizOutputElement.style.marginBottom = "0px"
   resultsContainer.style.backgroundColor = "white"
   resultsContainer.style.border = "3px solid black"
   resultsContainer.style.boxShadow = "5px 5px 5px black"
   executeButton.style.visibility = "hidden"
-  img.appendChild(devImg)
 
 
 
 
 }
+
+AOS.init();
 
