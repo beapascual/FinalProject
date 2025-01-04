@@ -70,7 +70,7 @@ button:hover{
   background-position: center;
   align-items: center;
   justify-content: center;
-  background-image: url("emoji.jpg");
+  background-color: #fffbc8;
 }
 .homeBody{
   display: flex;
